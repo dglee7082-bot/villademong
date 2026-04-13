@@ -1,0 +1,86 @@
+.page { max-width: 1100px; }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+.title { font-size: 1.5rem; font-weight: 600; color: var(--charcoal); }
+.headerActions { display: flex; align-items: center; gap: 1rem; }
+.count { font-size: 0.82rem; color: var(--gray); }
+
+.filters { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+.filterBtn {
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--gray-light);
+  background: var(--white);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--charcoal-mid);
+}
+.filterBtn:hover { border-color: var(--mint); color: var(--mint-dark); }
+.filterActive { background: var(--mint) !important; border-color: var(--mint) !important; color: var(--white) !important; }
+
+/* Drop Zone */
+.dropZone {
+  border: 2px dashed var(--gray-light);
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  background: var(--white);
+  border-radius: 10px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.dropZone:hover { border-color: var(--mint); background: var(--mint-pale); }
+.dropIcon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+.dropText { font-size: 0.95rem; color: var(--charcoal); margin-bottom: 0.25rem; }
+.dropSub { font-size: 0.78rem; color: var(--gray); }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(44,53,49,0.06);
+}
+.cardImg {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+.cardImg img { transition: transform 0.4s var(--ease); }
+.card:hover .cardImg img { transform: scale(1.05); }
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,53,49,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.card:hover .cardOverlay { background: rgba(44,53,49,0.45); }
+
+.deleteBtn {
+  opacity: 0;
+  background: #e05555;
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.25s;
+}
+.card:hover .deleteBtn { opacity: 1; }
+
+.cardInfo { padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; }
+.cardAlt { font-size: 0.82rem; color: var(--charcoal); }
+.cardCat { font-size: 0.68rem; background: var(--mint-pale); color: var(--mint-dark); padding: 0.2rem 0.6rem; border-radius: 999px; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }

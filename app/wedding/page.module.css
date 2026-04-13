@@ -1,0 +1,86 @@
+/* ── Page Top ────────────────────────────── */
+.pageTop {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageTopOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,53,49,0.52);
+  z-index: 1;
+}
+.pageTopContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--white);
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+/* ── Venue Section ───────────────────────── */
+.venue { padding: var(--section-py) var(--section-px); background: var(--white); }
+.venue:nth-child(even) { background: var(--ivory); }
+.venueInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.venueReverse .venueInner { }
+
+.venueImage {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+.venueImage img { transition: transform 0.6s var(--ease); }
+.venueImage:hover img { transform: scale(1.04); }
+
+.venueText { display: flex; flex-direction: column; }
+
+.venueInfo {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.75rem;
+  background: var(--mint-pale);
+}
+.venueInfoItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(123,191,176,0.25);
+}
+.venueInfoItem:last-child { border-bottom: none; padding-bottom: 0; }
+.venueInfoItem span { color: var(--charcoal-mid); }
+.venueInfoItem strong { color: var(--charcoal); }
+
+/* ── Gallery Teaser ──────────────────────── */
+.galleryTeaser {
+  background: var(--charcoal);
+  padding: var(--section-py) var(--section-px);
+}
+.galleryTeaserInner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .venueInner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .venueImage { height: 320px; }
+  .venueReverse .venueInner { direction: ltr; }
+}

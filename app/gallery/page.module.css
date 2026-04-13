@@ -1,0 +1,114 @@
+.pageTop {
+  padding-top: calc(var(--header-h) + 5rem);
+  padding-bottom: 5rem;
+  background: var(--charcoal);
+  text-align: center;
+}
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  margin: 0.5rem 0;
+}
+.pageSub { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
+/* Gallery Section */
+.gallerySection {
+  padding: 4rem var(--section-px) var(--section-py);
+  background: var(--ivory);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.filterBtn {
+  padding: 0.55rem 1.5rem;
+  border: 1.5px solid var(--gray-light);
+  background: var(--white);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--charcoal-mid);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.filterBtn:hover { border-color: var(--mint); color: var(--mint-dark); }
+.filterActive {
+  background: var(--mint) !important;
+  border-color: var(--mint) !important;
+  color: var(--white) !important;
+}
+
+/* Grid */
+.grid {
+  columns: 3;
+  column-gap: 1rem;
+}
+.gridItem {
+  break-inside: avoid;
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  height: 280px;
+  cursor: pointer;
+}
+.gridItemLarge { height: 420px; }
+
+.gridItem img { transition: transform 0.5s var(--ease); }
+.gridItem:hover img { transform: scale(1.06); }
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,53,49,0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 1.25rem;
+  transition: background 0.35s;
+}
+.gridItem:hover .gridOverlay { background: rgba(44,53,49,0.45); }
+
+.gridTag {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  background: var(--mint);
+  color: var(--white);
+  padding: 0.2rem 0.6rem;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s;
+}
+.gridAlt {
+  font-size: 0.85rem;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s 0.05s;
+}
+.gridItem:hover .gridTag,
+.gridItem:hover .gridAlt { opacity: 1; transform: translateY(0); }
+
+/* CTA */
+.cta {
+  background: var(--mint-pale);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.ctaText {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--charcoal);
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 900px) { .grid { columns: 2; } }
+@media (max-width: 600px) { .grid { columns: 1; } .gridItemLarge { height: 280px; } }

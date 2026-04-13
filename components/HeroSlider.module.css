@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s var(--ease);
+}
+.slide.active { opacity: 1; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(44,53,49,0.68) 0%,
+    rgba(44,53,49,0.3)  60%,
+    rgba(44,53,49,0.2)  100%
+  );
+}
+
+/* Content */
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 clamp(2rem, 8vw, 9rem);
+  max-width: 750px;
+  transition: opacity 0.5s, transform 0.5s var(--ease);
+}
+.visible { opacity: 1; transform: translateY(0); }
+.hidden  { opacity: 0; transform: translateY(16px); }
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--mint-light);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.2;
+  white-space: pre-line;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+.sub {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+}
+
+.actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Indicators */
+.indicators {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+}
+.dot {
+  width: 28px;
+  height: 2px;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, width 0.3s;
+}
+.dotActive { background: var(--mint-light); width: 48px; }
+
+/* Scroll hint */
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+}
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.4);
+  animation: scrollAnim 1.6s ease-in-out infinite;
+}
+@keyframes scrollAnim {
+  0%,100% { transform: scaleY(0); transform-origin: top; }
+  50%      { transform: scaleY(1); transform-origin: top; }
+}
+
+@media (max-width: 640px) {
+  .content { padding: 0 1.5rem; }
+  .scrollHint { display: none; }
+}

@@ -1,0 +1,20 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ivory);
+  padding: 2rem;
+}
+.card {
+  background: var(--white);
+  padding: 3rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 40px rgba(44,53,49,0.1);
+}
+.logo { text-align: center; margin-bottom: 2.5rem; }
+.logoEn { font-family: var(--font-serif); font-size: 1.75rem; color: var(--charcoal); }
+.logoKr { font-size: 0.7rem; letter-spacing: 0.25em; color: var(--mint); margin-top: 2px; }
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+.error { font-size: 0.82rem; color: #e05555; }

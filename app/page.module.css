@@ -1,0 +1,197 @@
+/* ── Intro Section ───────────────────────── */
+.intro {
+  padding: var(--section-py) 0;
+  background: var(--white);
+}
+.introInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 540px;
+}
+.introText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem clamp(2rem, 6vw, 6rem);
+}
+.introImage {
+  position: relative;
+  min-height: 420px;
+}
+
+/* ── Venue Cards ─────────────────────────── */
+.venues {
+  padding: var(--section-py) var(--section-px);
+  background: var(--ivory);
+}
+.venuesHeader { text-align: center; margin-bottom: 3.5rem; }
+.venueGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.venueCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--white);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s;
+  box-shadow: 0 2px 16px rgba(44,53,49,0.06);
+}
+.venueCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(44,53,49,0.12);
+}
+
+.venueCardImg {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.venueCardImg img { transition: transform 0.5s var(--ease); }
+.venueCard:hover .venueCardImg img { transform: scale(1.05); }
+
+.venueCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(44,53,49,0.55), transparent);
+}
+.venueTag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  background: var(--mint);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+}
+
+.venueCardBody {
+  padding: 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.venueCardBody h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--charcoal);
+}
+.venueCardBody p {
+  font-size: 0.85rem;
+  color: var(--charcoal-mid);
+  line-height: 1.7;
+  flex: 1;
+}
+.venueMore {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--mint-dark);
+  margin-top: auto;
+  transition: gap 0.2s;
+}
+
+/* ── Gallery Preview ─────────────────────── */
+.galleryPreview {
+  padding: var(--section-py) var(--section-px);
+  background: var(--white);
+}
+.galleryHeader { text-align: center; margin-bottom: 3rem; }
+
+.galleryGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 260px;
+  gap: 1rem;
+}
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.galleryDouble {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.galleryItem img { transition: transform 0.5s var(--ease); }
+.galleryItem:hover img { transform: scale(1.06); }
+
+.galleryItemOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,53,49,0);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem 1.25rem;
+  transition: background 0.3s;
+}
+.galleryItem:hover .galleryItemOverlay { background: rgba(44,53,49,0.35); }
+.galleryItemOverlay span {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.galleryItem:hover .galleryItemOverlay span { opacity: 1; transform: translateY(0); }
+
+/* ── CTA Banner ──────────────────────────── */
+.ctaBanner {
+  background: var(--charcoal);
+  padding: var(--section-py) var(--section-px);
+  position: relative;
+  overflow: hidden;
+}
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(123,191,176,0.12) 0%, transparent 70%);
+}
+
+.ctaInner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--white);
+  margin: 1rem 0;
+  line-height: 1.3;
+}
+.ctaSub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 2.5rem;
+}
+.ctaActions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 960px) {
+  .venueGrid { grid-template-columns: 1fr 1fr; }
+  .galleryGrid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .galleryDouble { grid-column: span 2; grid-row: auto; }
+}
+@media (max-width: 768px) {
+  .introInner { grid-template-columns: 1fr; }
+  .introImage { min-height: 320px; }
+  .venueGrid { grid-template-columns: 1fr; }
+  .galleryGrid { grid-template-columns: 1fr; }
+  .galleryDouble { grid-column: auto; }
+}
