@@ -1,29 +1,30 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 import styles from './page.module.css'
 
-export const metadata: Metadata = {
-  title: '갤러리 | Villa de Mong 빌라드몽',
-  description: '빌라드몽에서 진행된 아름다운 웨딩과 연회 사진들을 감상하세요.',
-}
-
 const images = [
-  { src: '/images/gallery-ceremony.jpg', alt: '웨딩 식장',    category: '웨딩' },
-  { src: '/images/hero-house.jpg',       alt: '하우스 웨딩',  category: '웨딩' },
-  { src: '/images/hero-outdoor.jpg',     alt: '야외 가든',    category: '웨딩' },
-  { src: '/images/gallery-banquet.jpg',  alt: '연회장',       category: '연회' },
+  { src: '/images/gallery-ceremony.jpg', alt: '웨딩 식장',     category: '웨딩' },
+  { src: '/images/hero-house.jpg',       alt: '하우스 웨딩',   category: '웨딩' },
+  { src: '/images/hero-outdoor.jpg',     alt: '야외 가든',     category: '웨딩' },
+  { src: '/images/gallery-banquet.jpg',  alt: '연회장',        category: '연회' },
   { src: '/images/about-venue.jpg',      alt: '빌라드몽 전경', category: '공간' },
-  { src: '/images/gallery-ceremony.jpg', alt: '플로럴 데코',  category: '데코' },
-  { src: '/images/hero-house.jpg',       alt: '브라이덜 룸',  category: '공간' },
-  { src: '/images/hero-outdoor.jpg',     alt: '정원 뷰',      category: '공간' },
-  { src: '/images/gallery-banquet.jpg',  alt: '돌잔치',       category: '연회' },
+  { src: '/images/gallery-ceremony.jpg', alt: '플로럴 데코',   category: '데코' },
+  { src: '/images/hero-house.jpg',       alt: '브라이덜 룸',   category: '공간' },
+  { src: '/images/hero-outdoor.jpg',     alt: '정원 뷰',       category: '공간' },
+  { src: '/images/gallery-banquet.jpg',  alt: '돌잔치',        category: '연회' },
 ]
 
 const categories = ['전체', '웨딩', '연회', '공간', '데코']
 
 export default function GalleryPage() {
+  const [active, setActive] = useState('전체')
+
+  const filtered = active === '전체' ? images : images.filter(img => img.category === active)
+
   return (
     <>
       <Header />
@@ -37,13 +38,14 @@ export default function GalleryPage() {
 
       {/* Filter + Grid */}
       <section className={styles.gallerySection}>
-        {/* Filter Tabs (UI만, 실제 필터는 추후 구현) */}
+        {/* Filter Tabs */}
         <div className={styles.filters}>
-          {categories.map((c, i) => (
+          {categories.map((c) => (
             <button
               key={c}
               id={`gallery-filter-${c}`}
-              className={`${styles.filterBtn} ${i === 0 ? styles.filterActive : ''}`}
+              className={`${styles.filterBtn} ${active === c ? styles.filterActive : ''}`}
+              onClick={() => setActive(c)}
             >
               {c}
             </button>
@@ -52,8 +54,8 @@ export default function GalleryPage() {
 
         {/* Masonry Grid */}
         <div className={styles.grid}>
-          {images.map((img, i) => (
-            <div key={i} className={`${styles.gridItem} ${i % 5 === 0 ? styles.gridItemLarge : ''}`}>
+          {filtered.map((img, i) => (
+            <div key={`${img.alt}-${i}`} className={`${styles.gridItem} ${i % 5 === 0 ? styles.gridItemLarge : ''}`}>
               <Image
                 src={img.src}
                 alt={img.alt}

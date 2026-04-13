@@ -1,0 +1,190 @@
+/* ── Page Hero ───────────────────────────────── */
+.pageHero {
+  position: relative;
+  height: 60vh;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44,53,49,0.4) 0%, rgba(44,53,49,0.65) 100%);
+  z-index: 1;
+}
+.pageHeroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.pageHeroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--white);
+  font-weight: 300;
+  margin: 0.5rem 0;
+  letter-spacing: 0.05em;
+}
+.pageHeroSub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.2em;
+  margin-top: 0.5rem;
+}
+
+/* ── Intro ───────────────────────────────────── */
+.intro {
+  padding: var(--section-py) var(--section-px);
+  background: var(--ivory);
+}
+.introInner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Event Section ───────────────────────────── */
+.eventSection {
+  padding: var(--section-py) var(--section-px);
+  background: var(--white);
+}
+.eventSection:nth-child(odd) {
+  background: var(--ivory);
+}
+.eventInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.eventReverse .eventInner {
+  direction: rtl;
+}
+.eventReverse .eventText,
+.eventReverse .eventImage {
+  direction: ltr;
+}
+
+.eventImage {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+.eventImage img {
+  transition: transform 0.6s var(--ease);
+}
+.eventImage:hover img {
+  transform: scale(1.04);
+}
+.eventImageBadge {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 60px;
+  height: 60px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(44,53,49,0.15);
+  z-index: 2;
+}
+.eventIcon { font-size: 1.6rem; }
+
+.eventText { display: flex; flex-direction: column; }
+
+.eventInfo {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.75rem;
+  background: var(--mint-pale);
+}
+.eventInfoItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(123,191,176,0.25);
+}
+.eventInfoItem:last-child { border-bottom: none; padding-bottom: 0; }
+.eventInfoItem span { color: var(--charcoal-mid); }
+.eventInfoItem strong { color: var(--charcoal); }
+
+/* ── Includes Section ────────────────────────── */
+.includesSection {
+  padding: var(--section-py) var(--section-px);
+  background: var(--charcoal);
+}
+.includesInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.includesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.includeCard {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem 1.75rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.includeCard:hover {
+  background: rgba(123,191,176,0.12);
+  transform: translateY(-4px);
+}
+.includeIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.includeTitle {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.includeDesc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+}
+
+/* ── CTA ─────────────────────────────────────── */
+.cta {
+  padding: var(--section-py) var(--section-px);
+  background: var(--mint-pale);
+}
+.ctaInner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ctaBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 900px) {
+  .eventInner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .eventImage { height: 320px; }
+  .eventReverse .eventInner { direction: ltr; }
+  .includesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .includesGrid { grid-template-columns: 1fr; }
+}
