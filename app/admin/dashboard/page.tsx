@@ -1,7 +1,9 @@
 import AdminLayout from '../AdminLayout'
 import styles from './page.module.css'
+import AnalyticsCharts from './components/AnalyticsCharts'
+import { getPageViews, getTrafficSources, getDeviceUsage } from '@/lib/ga'
 
-// 임시 데이터 (나중에 DB 연동)
+// 기존 임시 데이터 (상담/갤러리 관련 등)
 const stats = [
   { label: '이번 달 상담', value: '12건', icon: '📋', color: '#7BBFB0' },
   { label: '처리 대기',    value: '3건',  icon: '⏳', color: '#F6AD55' },
@@ -21,12 +23,21 @@ const statusColor: Record<string, string> = {
   '완료':  '#68D391',
 }
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  // GA4 데이터 서버 연동 (환경 변수 없으면 Mock Data 반환)
+  const pageViews = await getPageViews(30);
+  const trafficSources = await getTrafficSources();
+  const deviceUsage = await getDeviceUsage();
+
   return (
     <AdminLayout>
       <div className={styles.page}>
-        <h1 className={styles.title}>대시보드</h1>
+        <div className={styles.headerArea}>
+          <h1 className={styles.title}>대시보드</h1>
+          <p className={styles.subtitle}>홈페이지 트래픽 및 운영 지표를 확인하세요.</p>
+        </div>
 
+        {/* 최상단 요약 위젯 */}
         <div className={styles.statsGrid}>
           {stats.map(s => (
             <div key={s.label} className={styles.statCard}>
@@ -39,6 +50,14 @@ export default function DashboardPage() {
           ))}
         </div>
 
+        {/* 구글 애널리틱스 제공 영역 (트래픽 / 마케팅 데이터) */}
+        <AnalyticsCharts 
+          pageViews={pageViews} 
+          trafficSources={trafficSources} 
+          deviceUsage={deviceUsage} 
+        />
+
+        {/* 예약 정보 표 */}
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>최근 상담 신청</h2>

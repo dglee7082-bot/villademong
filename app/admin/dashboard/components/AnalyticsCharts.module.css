@@ -1,0 +1,92 @@
+.chartsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.chartsRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.chartCard {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0,0,0,0.04);
+  flex: 1;
+  min-width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chartCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.fullWidth {
+  width: 100%;
+  flex: none;
+}
+
+.chartHeader {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chartTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.chartWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.pieLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 16px;
+  min-width: 100px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.legendLabel {
+  color: #4b5563;
+  margin-right: auto;
+}
+
+.legendValue {
+  font-weight: 600;
+  color: #111827;
+  margin-left: 16px;
+}
+
+@media (max-width: 768px) {
+  .chartsRow {
+    flex-direction: column;
+  }
+}
