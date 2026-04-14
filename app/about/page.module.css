@@ -1,8 +1,8 @@
 /* ── Page Hero ───────────────────────────── */
 .pageHero {
   position: relative;
-  height: 60vh;
-  min-height: 420px;
+  height: 55vh;
+  min-height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,12 +93,21 @@
 
 @media (max-width: 960px) {
   .storyInner { grid-template-columns: 1fr; gap: 3rem; }
-  .storyImageGrid { grid-template-rows: 220px; }
+  .storyImageGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px;
+  }
   .storyImg1 { grid-row: auto; }
   .valuesGrid { grid-template-columns: repeat(2, 1fr); }
   .statsInner { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  .valuesGrid { grid-template-columns: 1fr; }
+  .pageHero { min-height: 300px; height: 50vh; }
+  .storyImageGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px;
+  }
+  .storyImg2 { display: none; }
+  .valuesGrid { grid-template-columns: 1fr 1fr; }
   .statsInner { grid-template-columns: 1fr 1fr; }
 }

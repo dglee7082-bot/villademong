@@ -91,3 +91,13 @@
   .inner { grid-template-columns: 1fr; }
   .mapWrap { height: 360px; }
 }
+@media (max-width: 640px) {
+  .pageTop {
+    padding-top: calc(var(--header-h) + 2.5rem);
+    padding-bottom: 2.5rem;
+  }
+  .mapWrap { height: 280px; }
+  .mapBtns { flex-direction: column; }
+  .mapBtn { justify-content: center; text-align: center; }
+  .contactPhone { font-size: 1.3rem; }
+}

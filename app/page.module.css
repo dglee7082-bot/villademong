@@ -190,8 +190,18 @@
 }
 @media (max-width: 768px) {
   .introInner { grid-template-columns: 1fr; }
-  .introImage { min-height: 320px; }
+  .introText { padding: 3rem 1.5rem; }
+  .introImage { min-height: 280px; }
   .venueGrid { grid-template-columns: 1fr; }
+  .venueCardImg { height: 240px; }
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px 180px 180px;
+  }
+  .galleryDouble { grid-column: span 2; grid-row: auto; }
+  .ctaActions { flex-direction: column; }
+}
+@media (max-width: 480px) {
   .galleryGrid { grid-template-columns: 1fr; }
   .galleryDouble { grid-column: auto; }
 }

@@ -84,3 +84,7 @@
   .venueImage { height: 320px; }
   .venueReverse .venueInner { direction: ltr; }
 }
+@media (max-width: 640px) {
+  .pageTop { min-height: 300px; height: 50vh; }
+  .venueImage { height: 260px; }
+}

@@ -175,7 +175,7 @@
   flex-wrap: wrap;
 }
 
-/* ── Responsive ──────────────────────────────── */
+/* ── Responsive ───────────────────────────── */
 @media (max-width: 900px) {
   .eventInner {
     grid-template-columns: 1fr;
@@ -185,6 +185,9 @@
   .eventReverse .eventInner { direction: ltr; }
   .includesGrid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .pageHero { min-height: 300px; height: 50vh; }
+  .eventImage { height: 260px; }
   .includesGrid { grid-template-columns: 1fr; }
+  .ctaBtns { flex-direction: column; align-items: stretch; }
 }

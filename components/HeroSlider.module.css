@@ -115,7 +115,19 @@
   50%      { transform: scaleY(1); transform-origin: top; }
 }
 
-@media (max-width: 640px) {
-  .content { padding: 0 1.5rem; }
+@media (max-width: 768px) {
+  .hero { min-height: 520px; }
+  .content {
+    padding: 0 1.5rem;
+    padding-bottom: 5rem; /* 인디케이터 공간 */
+    max-width: 100%;
+  }
+  .title { white-space: normal; }
+  .actions { flex-direction: column; }
+  .actions a, .actions button { width: 100%; justify-content: center; }
+  .indicators { bottom: 1.75rem; }
   .scrollHint { display: none; }
+}
+@media (max-width: 480px) {
+  .hero { min-height: 460px; }
 }

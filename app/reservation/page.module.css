@@ -67,3 +67,10 @@
 @media (max-width: 900px) {
   .inner { grid-template-columns: 1fr; }
 }
+@media (max-width: 640px) {
+  .pageTop {
+    padding-top: calc(var(--header-h) + 2.5rem);
+    padding-bottom: 2.5rem;
+  }
+  .infoPanel { padding: 1.75rem; }
+}
