@@ -47,6 +47,21 @@ const mockDeviceUsage = [
 // 실제 GA API 호출 함수
 // ==========================================
 
+export async function checkGAConnection() {
+  if (!client || !propertyId) return "Env vars missing (client or propertyId is null)";
+  try {
+    await client.runReport({
+      property: `properties/${propertyId}`,
+      dateRanges: [{ startDate: '1daysAgo', endDate: 'today' }],
+      dimensions: [{ name: 'date' }],
+      metrics: [{ name: 'screenPageViews' }],
+    });
+    return null; // No error
+  } catch (error: any) {
+    return error.message || error.toString();
+  }
+}
+
 export async function getPageViews(days = 30) {
   if (!client || !propertyId) return getMockPageViews(days);
 
