@@ -1,14 +1,13 @@
 import { BetaAnalyticsDataClient } from '@google-analytics/data';
 
-const propertyId = process.env.GA_PROPERTY_ID;
+const propertyId = process.env.GA_PROPERTY_ID?.replace(/"/g, '')?.trim();
 
 const client = propertyId && process.env.GA_PRIVATE_KEY
   ? new BetaAnalyticsDataClient({
       credentials: {
-        client_email: process.env.GA_CLIENT_EMAIL,
+        client_email: process.env.GA_CLIENT_EMAIL?.replace(/"/g, '')?.trim(),
         private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n').replace(/"/g, ''),
       },
-      projectId: process.env.GA_PROJECT_ID,
     })
   : null;
 
