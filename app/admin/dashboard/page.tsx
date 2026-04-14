@@ -23,6 +23,8 @@ const statusColor: Record<string, string> = {
   '완료':  '#68D391',
 }
 
+export const dynamic = 'force-dynamic'; // 항상 실시간(최신) 서버 데이터 호출 보장
+
 export default async function DashboardPage() {
   // GA4 데이터 서버 연동 (환경 변수 없으면 Mock Data 반환)
   const pageViews = await getPageViews(30);

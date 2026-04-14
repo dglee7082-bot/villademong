@@ -6,7 +6,7 @@ const client = propertyId && process.env.GA_PRIVATE_KEY
   ? new BetaAnalyticsDataClient({
       credentials: {
         client_email: process.env.GA_CLIENT_EMAIL,
-        private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+        private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n').replace(/"/g, ''),
       },
       projectId: process.env.GA_PROJECT_ID,
     })
