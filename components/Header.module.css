@@ -88,6 +88,23 @@
   color: var(--white) !important;
 }
 
+.transparent .navLink.highlight {
+  border-color: rgba(255,255,255,0.85);
+  color: var(--white) !important;
+}
+.transparent .navLink.highlight:hover {
+  background: var(--white);
+  color: var(--charcoal) !important;
+}
+.scrolled.transparent .navLink.highlight {
+  border-color: var(--mint);
+  color: var(--mint-dark) !important;
+}
+.scrolled.transparent .navLink.highlight:hover {
+  background: var(--mint);
+  color: var(--white) !important;
+}
+
 /* ── Hamburger ────────────────────────────── */
 .hamburger {
   display: none;

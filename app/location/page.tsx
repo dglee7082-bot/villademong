@@ -34,7 +34,7 @@ export default function LocationPage() {
               src="/images/location-map.jpg"
               alt="빌라드몽 약도"
               width={1800}
-              height={1690}
+              height={1210}
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
