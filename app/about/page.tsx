@@ -25,8 +25,8 @@ export default function AboutPage() {
       {/* Page Hero */}
       <div className={styles.pageHero}>
         <Image
-          src="/images/about-venue.jpg"
-          alt="빌라드몽 전경"
+          src="/images/ceremony-1.jpg"
+          alt="빌라드몽 예식홀"
           fill
           priority
           style={{ objectFit: 'cover' }}

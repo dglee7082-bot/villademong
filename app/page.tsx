@@ -104,7 +104,7 @@ export default function HomePage() {
             { src: '/images/hero-house.jpg',      alt: '하우스웨딩' },
             { src: '/images/gallery-banquet.jpg', alt: '연회장' },
             { src: '/images/hero-outdoor.jpg',    alt: '야외웨딩' },
-            { src: '/images/about-venue.jpg',     alt: '전경' },
+            { src: '/images/about-building.jpg',  alt: '전경' },
           ].map((g, i) => (
             <div key={i} className={`${styles.galleryItem} ${g.span === 'double' ? styles.galleryDouble : ''}`}>
               <Image src={g.src} alt={g.alt} fill style={{ objectFit: 'cover' }} />

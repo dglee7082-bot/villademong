@@ -11,7 +11,7 @@ const sampleGallery = [
   { id: 2, src: '/images/hero-house.jpg',       alt: '하우스 웨딩', category: '웨딩' as Category },
   { id: 3, src: '/images/hero-outdoor.jpg',     alt: '야외 가든',   category: '웨딩' as Category },
   { id: 4, src: '/images/gallery-banquet.jpg',  alt: '연회장',      category: '연회' as Category },
-  { id: 5, src: '/images/about-venue.jpg',      alt: '빌라드몽 전경', category: '공간' as Category },
+  { id: 5, src: '/images/about-building.jpg',   alt: '빌라드몽 전경', category: '공간' as Category },
 ]
 
 export default function GalleryAdminPage() {
