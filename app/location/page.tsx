@@ -56,7 +56,7 @@ export default function LocationPage() {
                   카카오맵으로 보기
                 </a>
                 <a
-                  href={`https://naver.me/map?query=${mapQuery}`}
+                  href={`https://map.naver.com/p/search/${mapQuery}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${styles.mapBtn} ${styles.mapBtnNaver}`}
