@@ -26,6 +26,8 @@
 .mapWrap {
   border: 1px solid var(--gray-light);
   overflow: hidden;
+  background: var(--white);
+  padding: 3rem 1.5rem;
 }
 .mapWrap img { display: block; }
 
