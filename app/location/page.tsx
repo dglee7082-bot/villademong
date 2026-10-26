@@ -72,47 +72,35 @@ export default function LocationPage() {
             {/* Transport */}
             <div className={styles.transport}>
               <div className={styles.transportItem}>
-                <div className={styles.transportIcon} style={{ background: '#4CAF82' }}>🚌</div>
-                <div>
-                  <p className={styles.transportTitle}>대중교통</p>
-                  <p className={styles.transportDesc}>
-                    판교역(신분당선) 1번 출구 건너편 판교역 북편 정류장(07075)에서<br/>
-                    누리3번 버스 → 석운동 정류장(07452) 하차
-                  </p>
-                </div>
+                <p className={styles.transportTitle}>대중교통</p>
+                <p className={styles.transportDesc}>
+                  판교역(신분당선) 1번 출구 건너편 판교역 북편 정류장(07075)에서<br/>
+                  누리3번 버스 → 석운동 정류장(07452) 하차
+                </p>
               </div>
 
               <div className={styles.transportItem}>
-                <div className={styles.transportIcon} style={{ background: '#FF6B35' }}>🚐</div>
-                <div>
-                  <p className={styles.transportTitle}>셔틀버스</p>
-                  <p className={styles.transportDesc}>
-                    판교역(신분당선) 1번 출구 건너편 버스 정류장 인근에서 탑승<br/>
-                    예식 1시간 전부터 15~20분 간격으로 운행
-                  </p>
-                </div>
+                <p className={styles.transportTitle}>셔틀버스</p>
+                <p className={styles.transportDesc}>
+                  판교역(신분당선) 1번 출구 건너편 버스 정류장 인근에서 탑승<br/>
+                  예식 1시간 전부터 15~20분 간격으로 운행
+                </p>
               </div>
 
               <div className={styles.transportItem}>
-                <div className={styles.transportIcon} style={{ background: '#7BBFB0' }}>🚗</div>
-                <div>
-                  <p className={styles.transportTitle}>자동차</p>
-                  <p className={styles.transportDesc}>
-                    내비게이션 &apos;빌라드몽&apos; 또는 &apos;석운로 181&apos; 검색<br/>
-                    용인서울고속도로 서판교IC → 운중터널 → 고기리·대장동 방면
-                  </p>
-                </div>
+                <p className={styles.transportTitle}>자동차</p>
+                <p className={styles.transportDesc}>
+                  내비게이션 &apos;빌라드몽&apos; 또는 &apos;석운로 181&apos; 검색<br/>
+                  용인서울고속도로 서판교IC → 운중터널 → 고기리·대장동 방면
+                </p>
               </div>
 
               <div className={styles.transportItem}>
-                <div className={styles.transportIcon} style={{ background: '#5A9E8F' }}>🅿️</div>
-                <div>
-                  <p className={styles.transportTitle}>주차 안내</p>
-                  <p className={styles.transportDesc}>
-                    빌라드몽 전용 주차장 이용<br/>
-                    도착 후 현장 주차요원의 안내를 받아주세요
-                  </p>
-                </div>
+                <p className={styles.transportTitle}>주차 안내</p>
+                <p className={styles.transportDesc}>
+                  빌라드몽 전용 주차장 이용<br/>
+                  도착 후 현장 주차요원의 안내를 받아주세요
+                </p>
               </div>
             </div>
 

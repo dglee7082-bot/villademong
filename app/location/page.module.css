@@ -50,32 +50,22 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.6rem 1.25rem;
-  background: #FEE500;
-  color: #3C1E1E;
+  background: var(--ivory-dark);
+  border: 1px solid var(--gray-light);
+  color: var(--charcoal);
   font-size: 0.82rem;
   text-decoration: none;
   font-weight: 500;
-  transition: filter 0.2s;
+  transition: background 0.2s;
 }
-.mapBtn:hover { filter: brightness(0.95); }
-.mapBtnNaver { background: #03C75A; color: var(--white); }
-.mapBtnNaver:hover { filter: brightness(0.92); }
+.mapBtn:hover { background: var(--gray-light); }
+.mapBtnNaver {}
 
 .dividerLine { border: none; border-top: 1px solid var(--ivory-dark); margin: 2rem 0; }
 
 /* Transport */
 .transport { display: flex; flex-direction: column; gap: 1.5rem; }
-.transportItem { display: flex; gap: 1rem; align-items: flex-start; }
-.transportIcon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  flex-shrink: 0;
-}
+.transportItem {}
 .transportTitle { font-weight: 600; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 0.25rem; }
 .transportDesc { font-size: 0.83rem; color: var(--charcoal-mid); line-height: 1.7; }
 .transportDesc strong { color: var(--charcoal); }
