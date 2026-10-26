@@ -52,8 +52,8 @@ export default function Header() {
             <Image
               src={showLightLogo ? '/logo-light.png' : '/logo-dark.png'}
               alt="빌라드몽 Villa de Mong"
-              width={160}
-              height={153}
+              width={320}
+              height={50}
               priority
               className={styles.logoImg}
             />
