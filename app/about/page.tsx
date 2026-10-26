@@ -90,23 +90,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className={styles.stats}>
-        <div className={styles.statsInner}>
-          {[
-            { num: '500+', label: '누적 웨딩 진행' },
-            { num: '98%', label: '고객 만족도' },
-            { num: '10+', label: '운영 연수' },
-            { num: '1:1', label: '전담 플래너 서비스' },
-          ].map(s => (
-            <div key={s.label} className={styles.statItem}>
-              <p className={styles.statNum}>{s.num}</p>
-              <p className={styles.statLabel}>{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <Footer />
     </>
   )
