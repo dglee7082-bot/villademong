@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
 
@@ -29,15 +30,12 @@ export default function LocationPage() {
 
           {/* Map */}
           <div className={styles.mapWrap}>
-            <iframe
-              src={`https://maps.google.com/maps?q=${mapQuery}&output=embed&hl=ko&z=16`}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="빌라드몽 위치"
+            <Image
+              src="/images/location-map.jpg"
+              alt="빌라드몽 약도"
+              width={1800}
+              height={2544}
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
 
@@ -74,23 +72,23 @@ export default function LocationPage() {
             {/* Transport */}
             <div className={styles.transport}>
               <div className={styles.transportItem}>
-                <div className={styles.transportIcon} style={{ background: '#FF6B35' }}>🚇</div>
+                <div className={styles.transportIcon} style={{ background: '#4CAF82' }}>🚌</div>
                 <div>
-                  <p className={styles.transportTitle}>지하철</p>
+                  <p className={styles.transportTitle}>대중교통</p>
                   <p className={styles.transportDesc}>
-                    신분당선 <strong>판교역</strong> 1번 출구 → 마을버스 이용 약 10분<br/>
-                    분당선 <strong>서현역</strong> 2번 출구 → 택시 약 15분
+                    판교역(신분당선) 1번 출구 건너편 판교역 북편 정류장(07075)에서<br/>
+                    누리3번 버스 → 석운동 정류장(07452) 하차
                   </p>
                 </div>
               </div>
 
               <div className={styles.transportItem}>
-                <div className={styles.transportIcon} style={{ background: '#4CAF82' }}>🚌</div>
+                <div className={styles.transportIcon} style={{ background: '#FF6B35' }}>🚐</div>
                 <div>
-                  <p className={styles.transportTitle}>버스</p>
+                  <p className={styles.transportTitle}>셔틀버스</p>
                   <p className={styles.transportDesc}>
-                    분당구청 방면 버스 이용 후 석운로 하차<br/>
-                    51, 500, M4108번 등 이용 가능
+                    판교역(신분당선) 1번 출구 건너편 버스 정류장 인근에서 탑승<br/>
+                    예식 1시간 전부터 15~20분 간격으로 운행
                   </p>
                 </div>
               </div>
@@ -98,10 +96,21 @@ export default function LocationPage() {
               <div className={styles.transportItem}>
                 <div className={styles.transportIcon} style={{ background: '#7BBFB0' }}>🚗</div>
                 <div>
-                  <p className={styles.transportTitle}>자가용</p>
+                  <p className={styles.transportTitle}>자동차</p>
                   <p className={styles.transportDesc}>
-                    판교IC 또는 분당IC 이용<br/>
-                    건물 내 주차장 무료 이용 가능 (100대)
+                    내비게이션 &apos;빌라드몽&apos; 또는 &apos;석운로 181&apos; 검색<br/>
+                    용인서울고속도로 서판교IC → 운중터널 → 고기리·대장동 방면
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.transportItem}>
+                <div className={styles.transportIcon} style={{ background: '#5A9E8F' }}>🅿️</div>
+                <div>
+                  <p className={styles.transportTitle}>주차 안내</p>
+                  <p className={styles.transportDesc}>
+                    빌라드몽 전용 주차장 이용<br/>
+                    도착 후 현장 주차요원의 안내를 받아주세요
                   </p>
                 </div>
               </div>
