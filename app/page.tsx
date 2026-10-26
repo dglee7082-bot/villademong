@@ -33,10 +33,10 @@ export default function HomePage() {
           </div>
           <div className={styles.introImage}>
             <Image
-              src="/images/about-venue.jpg"
+              src="/images/about-building.jpg"
               alt="빌라드몽 전경"
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: 'center 70%' }}
             />
           </div>
         </div>
