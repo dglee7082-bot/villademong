@@ -7,15 +7,15 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 const images = [
-  { src: '/images/gallery-ceremony.jpg', alt: '웨딩 식장',     category: '웨딩' },
-  { src: '/images/hero-house.jpg',       alt: '하우스 웨딩',   category: '웨딩' },
-  { src: '/images/hero-outdoor.jpg',     alt: '야외 가든',     category: '웨딩' },
-  { src: '/images/gallery-banquet.jpg',  alt: '연회장',        category: '연회' },
-  { src: '/images/about-venue.jpg',      alt: '빌라드몽 전경', category: '공간' },
-  { src: '/images/gallery-ceremony.jpg', alt: '플로럴 데코',   category: '데코' },
-  { src: '/images/hero-house.jpg',       alt: '브라이덜 룸',   category: '공간' },
-  { src: '/images/hero-outdoor.jpg',     alt: '정원 뷰',       category: '공간' },
-  { src: '/images/banquet-corporate.jpg', alt: '기업 행사',    category: '연회' },
+  { src: '/images/hero-outdoor.jpg',      alt: '야외 가든 웨딩',   category: '웨딩' },
+  { src: '/images/hero-house.jpg',        alt: '하우스 웨딩홀',    category: '웨딩' },
+  { src: '/images/ceremony-1.jpg',        alt: '웨딩 식장',        category: '웨딩' },
+  { src: '/images/ceremony-2.jpg',        alt: '브라이덜 아일',    category: '공간' },
+  { src: '/images/gallery-banquet.jpg',   alt: '연회장',           category: '연회' },
+  { src: '/images/banquet-corporate.jpg', alt: '기업 행사',        category: '연회' },
+  { src: '/images/banquet-70-80.jpg',     alt: '연회 홀',          category: '공간' },
+  { src: '/images/banquet-doljanchi.jpg', alt: '테이블 플로럴 데코', category: '데코' },
+  { src: '/images/banquet-party.jpg',     alt: '연회장 전경',      category: '연회' },
 ]
 
 const categories = ['전체', '웨딩', '연회', '공간', '데코']
