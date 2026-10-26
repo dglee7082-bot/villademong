@@ -44,7 +44,7 @@
   text-decoration: none;
 }
 .logoImg {
-  height: 46px;
+  height: 31px;
   width: auto;
 }
 
@@ -165,5 +165,5 @@
   .transparent .hamburger { color: var(--white); }
   .solid .hamburger,
   .scrolled .hamburger { color: var(--charcoal); }
-  .logoImg { height: 38px; }
+  .logoImg { height: 25px; }
 }
