@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import styles from './Header.module.css'
@@ -34,6 +35,7 @@ export default function Header() {
   }, [open])
 
   const isHome = pathname === '/'
+  const showLightLogo = isHome && !scrolled
 
   return (
     <>
@@ -47,8 +49,14 @@ export default function Header() {
         <div className={styles.inner}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoEn}>Villa de Mong</span>
-            <span className={styles.logoKr}>빌라드몽</span>
+            <Image
+              src={showLightLogo ? '/logo-light.png' : '/logo-dark.png'}
+              alt="빌라드몽 Villa de Mong"
+              width={160}
+              height={153}
+              priority
+              className={styles.logoImg}
+            />
           </Link>
 
           {/* Desktop Nav */}

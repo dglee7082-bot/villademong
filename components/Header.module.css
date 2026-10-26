@@ -12,8 +12,6 @@
   background: transparent;
 }
 .transparent .navLink { color: rgba(255,255,255,0.92); }
-.transparent .logoEn,
-.transparent .logoKr  { color: var(--white); }
 
 .solid, .scrolled {
   background: rgba(255,255,255,0.97);
@@ -21,8 +19,6 @@
   box-shadow: 0 1px 24px rgba(44,53,49,0.08);
 }
 .solid .navLink { color: var(--charcoal); }
-.solid .logoEn,
-.solid .logoKr  { color: var(--charcoal); }
 
 /* scrolled overrides transparent */
 .scrolled.transparent {
@@ -30,8 +26,6 @@
   box-shadow: 0 1px 24px rgba(44,53,49,0.08);
 }
 .scrolled .navLink { color: var(--charcoal) !important; }
-.scrolled .logoEn,
-.scrolled .logoKr  { color: var(--charcoal) !important; }
 
 .inner {
   height: 100%;
@@ -46,23 +40,12 @@
 /* ── Logo ─────────────────────────────────── */
 .logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1.15;
+  align-items: center;
   text-decoration: none;
 }
-.logoEn {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  transition: color 0.3s;
-}
-.logoKr {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  color: var(--mint);
-  font-weight: 400;
+.logoImg {
+  height: 46px;
+  width: auto;
 }
 
 /* ── Nav ──────────────────────────────────── */
@@ -182,4 +165,5 @@
   .transparent .hamburger { color: var(--white); }
   .solid .hamburger,
   .scrolled .hamburger { color: var(--charcoal); }
+  .logoImg { height: 38px; }
 }
