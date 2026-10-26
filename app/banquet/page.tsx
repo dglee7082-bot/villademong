@@ -17,7 +17,7 @@ const events = [
     tag: 'DOLJANCHI',
     title: '돌잔치',
     desc: '아이의 첫 번째 생일을 빌라드몽에서 더욱 특별하게 기념하세요. 아기자기한 테마 데코레이션부터 포토존, 케이터링까지 모든 것을 원스톱으로 준비해드립니다.',
-    img: '/images/gallery-banquet.jpg',
+    img: '/images/banquet-doljanchi.jpg',
     imgAlt: '돌잔치 연회장',
     info: [
       { label: '수용 인원', value: '최대 150명' },
@@ -31,7 +31,7 @@ const events = [
     tag: 'BIRTHDAY',
     title: '칠순·팔순 잔치',
     desc: '소중한 어른의 특별한 날을 품격 있게 준비해드립니다. 한식 상차림부터 양식 뷔페까지 다양한 메뉴 구성과 함께 아름다운 공간에서 감사의 마음을 전하세요.',
-    img: '/images/gallery-banquet.jpg',
+    img: '/images/banquet-70-80.jpg',
     imgAlt: '칠순잔치 연회',
     info: [
       { label: '수용 인원', value: '최대 200명' },
@@ -45,7 +45,7 @@ const events = [
     tag: 'CORPORATE',
     title: '기업 행사',
     desc: '창립기념일, 임직원 워크샵, 시상식 등 기업 이벤트를 격조 있게 진행하세요. 프로젝터·음향 시스템·케이터링 등 비즈니스에 필요한 모든 인프라를 갖추고 있습니다.',
-    img: '/images/gallery-banquet.jpg',
+    img: '/images/banquet-corporate.jpg',
     imgAlt: '기업 행사장',
     info: [
       { label: '수용 인원', value: '최대 300명' },
@@ -59,7 +59,7 @@ const events = [
     tag: 'PRIVATE PARTY',
     title: '프라이빗 파티',
     desc: '생일파티, 연인의 기념일, 가족 모임 등 소중한 사람들과의 특별한 자리를 만들어드립니다. 프라이빗 공간에서 오직 여러분만을 위한 감성적인 시간을 경험하세요.',
-    img: '/images/gallery-banquet.jpg',
+    img: '/images/banquet-party.jpg',
     imgAlt: '프라이빗 파티장',
     info: [
       { label: '수용 인원', value: '최소 20명~' },
