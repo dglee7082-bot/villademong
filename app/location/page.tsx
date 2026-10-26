@@ -53,7 +53,7 @@ export default function LocationPage() {
                   className={styles.mapBtn}
                   id="kakao-map-btn"
                 >
-                  <span>🗺️</span> 카카오맵으로 보기
+                  카카오맵으로 보기
                 </a>
                 <a
                   href={`https://naver.me/map?query=${mapQuery}`}
@@ -62,7 +62,7 @@ export default function LocationPage() {
                   className={`${styles.mapBtn} ${styles.mapBtnNaver}`}
                   id="naver-map-btn"
                 >
-                  <span>📍</span> 네이버지도로 보기
+                  네이버지도로 보기
                 </a>
               </div>
             </div>
