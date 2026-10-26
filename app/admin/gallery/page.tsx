@@ -7,7 +7,7 @@ import styles from './page.module.css'
 type Category = '전체' | '웨딩' | '연회' | '공간'
 
 const sampleGallery = [
-  { id: 1, src: '/images/gallery-ceremony.jpg', alt: '웨딩 식장', category: '웨딩' as Category },
+  { id: 1, src: '/images/ceremony-1.jpg',       alt: '웨딩 식장', category: '웨딩' as Category },
   { id: 2, src: '/images/hero-house.jpg',       alt: '하우스 웨딩', category: '웨딩' as Category },
   { id: 3, src: '/images/hero-outdoor.jpg',     alt: '야외 가든',   category: '웨딩' as Category },
   { id: 4, src: '/images/gallery-banquet.jpg',  alt: '연회장',      category: '연회' as Category },

@@ -100,7 +100,7 @@ export default function HomePage() {
         </div>
         <div className={styles.galleryGrid}>
           {[
-            { src: '/images/gallery-ceremony.jpg', alt: '식장', span: 'double' },
+            { src: '/images/ceremony-1.jpg',       alt: '식장', span: 'double' },
             { src: '/images/hero-house.jpg',      alt: '하우스웨딩' },
             { src: '/images/gallery-banquet.jpg', alt: '연회장' },
             { src: '/images/hero-outdoor.jpg',    alt: '야외웨딩' },

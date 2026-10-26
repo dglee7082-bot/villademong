@@ -18,7 +18,7 @@ export default function WeddingPage() {
       {/* Page Top */}
       <div className={styles.pageTop}>
         <div className={styles.pageTopOverlay} />
-        <Image src="/images/gallery-ceremony.jpg" alt="웨딩홀" fill priority style={{ objectFit: 'cover' }} />
+        <Image src="/images/ceremony-2.jpg" alt="웨딩홀" fill priority style={{ objectFit: 'cover' }} />
         <div className={styles.pageTopContent}>
           <span className="section-label" style={{ color: 'var(--mint-light)' }}>WEDDING</span>
           <h1 className={styles.heroTitle}>웨딩홀 소개</h1>
