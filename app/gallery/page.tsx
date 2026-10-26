@@ -15,7 +15,7 @@ const images = [
   { src: '/images/gallery-ceremony.jpg', alt: '플로럴 데코',   category: '데코' },
   { src: '/images/hero-house.jpg',       alt: '브라이덜 룸',   category: '공간' },
   { src: '/images/hero-outdoor.jpg',     alt: '정원 뷰',       category: '공간' },
-  { src: '/images/gallery-banquet.jpg',  alt: '돌잔치',        category: '연회' },
+  { src: '/images/banquet-corporate.jpg', alt: '기업 행사',    category: '연회' },
 ]
 
 const categories = ['전체', '웨딩', '연회', '공간', '데코']

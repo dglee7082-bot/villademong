@@ -7,38 +7,10 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: '연회 | Villa de Mong 빌라드몽',
-  description: '빌라드몽에서 돌잔치, 칠순·팔순잔치, 기업행사, 생일파티 등 특별한 연회를 경험하세요. 전담 플래너의 맞춤 서비스로 완벽한 하루를 선물합니다.',
+  description: '빌라드몽에서 기업행사를 경험하세요. 전담 플래너의 맞춤 서비스로 완벽한 하루를 선물합니다.',
 }
 
 const events = [
-  {
-    id: 'doljanchi',
-    icon: '🎉',
-    tag: 'DOLJANCHI',
-    title: '돌잔치',
-    desc: '아이의 첫 번째 생일을 빌라드몽에서 더욱 특별하게 기념하세요. 아기자기한 테마 데코레이션부터 포토존, 케이터링까지 모든 것을 원스톱으로 준비해드립니다.',
-    img: '/images/banquet-doljanchi.jpg',
-    imgAlt: '돌잔치 연회장',
-    info: [
-      { label: '수용 인원', value: '최대 150명' },
-      { label: '소요 시간', value: '3~4시간' },
-      { label: '포함 서비스', value: '케이터링·데코·촬영 패키지' },
-    ],
-  },
-  {
-    id: 'birthday',
-    icon: '🎂',
-    tag: 'BIRTHDAY',
-    title: '칠순·팔순 잔치',
-    desc: '소중한 어른의 특별한 날을 품격 있게 준비해드립니다. 한식 상차림부터 양식 뷔페까지 다양한 메뉴 구성과 함께 아름다운 공간에서 감사의 마음을 전하세요.',
-    img: '/images/banquet-70-80.jpg',
-    imgAlt: '칠순잔치 연회',
-    info: [
-      { label: '수용 인원', value: '최대 200명' },
-      { label: '소요 시간', value: '3~5시간' },
-      { label: '포함 서비스', value: '맞춤 메뉴·생화 장식·영상 제작' },
-    ],
-  },
   {
     id: 'corporate',
     icon: '🏢',
@@ -51,20 +23,6 @@ const events = [
       { label: '수용 인원', value: '최대 300명' },
       { label: '소요 시간', value: '협의 가능' },
       { label: '포함 서비스', value: 'AV 장비·케이터링·전담 스태프' },
-    ],
-  },
-  {
-    id: 'party',
-    icon: '🥂',
-    tag: 'PRIVATE PARTY',
-    title: '프라이빗 파티',
-    desc: '생일파티, 연인의 기념일, 가족 모임 등 소중한 사람들과의 특별한 자리를 만들어드립니다. 프라이빗 공간에서 오직 여러분만을 위한 감성적인 시간을 경험하세요.',
-    img: '/images/banquet-party.jpg',
-    imgAlt: '프라이빗 파티장',
-    info: [
-      { label: '수용 인원', value: '최소 20명~' },
-      { label: '소요 시간', value: '2~4시간' },
-      { label: '포함 서비스', value: '플라워 데코·케이터링·포토존' },
     ],
   },
 ]
@@ -107,7 +65,7 @@ export default function BanquetPage() {
           <h2 className="section-title">빌라드몽의 <em>연회 서비스</em></h2>
           <div className="divider divider-center" />
           <p className="section-desc" style={{ textAlign: 'center', margin: '0 auto' }}>
-            돌잔치부터 기업행사까지, 빌라드몽은 모든 종류의 연회를 품격 있게 준비합니다.<br />
+            창립기념일부터 임직원 워크샵, 시상식까지, 빌라드몽은 기업 행사를 품격 있게 준비합니다.<br />
             전담 이벤트 플래너와 함께 처음부터 끝까지 완벽한 하루를 만들어드립니다.
           </p>
         </div>

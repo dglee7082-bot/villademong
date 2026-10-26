@@ -70,8 +70,8 @@ export default function HomePage() {
             {
               img: '/images/gallery-banquet.jpg',
               tag: 'Banquet Hall',
-              title: '연회 & 돌잔치',
-              desc: '기업 행사, 돌잔치, 생일파티 등 다양한 행사를 품격 있게 진행할 수 있는 연회 공간입니다.',
+              title: '연회 & 기업행사',
+              desc: '창립기념일, 임직원 워크샵, 시상식 등 기업 이벤트를 품격 있게 진행할 수 있는 연회 공간입니다.',
               href: '/banquet',
             },
           ].map((v) => (

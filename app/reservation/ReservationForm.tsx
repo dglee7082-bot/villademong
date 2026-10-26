@@ -89,7 +89,7 @@ export default function ReservationForm() {
             <option value="">선택해주세요</option>
             <option value="house">하우스 웨딩</option>
             <option value="garden">야외 가든 웨딩</option>
-            <option value="banquet">연회 / 돌잔치</option>
+            <option value="banquet">연회 / 기업행사</option>
             <option value="other">기타</option>
           </select>
         </div>
