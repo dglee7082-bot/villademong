@@ -85,7 +85,6 @@ export default function HomePage() {
               <div className={styles.venueCardBody}>
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
-                <span className={styles.venueMore}>자세히 보기 →</span>
               </div>
             </Link>
           ))}
@@ -132,7 +131,7 @@ export default function HomePage() {
           </p>
           {SHOW_HOME_ACTIONS && <div className={styles.ctaActions}>
             <Link href="/reservation" className="btn-white">상담 신청하기</Link>
-            <a href="tel:010-0000-0000" className="btn-outline" style={{ borderColor: 'rgba(255,255,255,0.5)', color: '#fff' }}>
+            <a href="tel:031-708-0181" className="btn-outline" style={{ borderColor: 'rgba(255,255,255,0.5)', color: '#fff' }}>
               전화 문의 →
             </a>
           </div>}

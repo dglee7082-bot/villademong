@@ -116,8 +116,8 @@ export async function POST(req: NextRequest) {
         <p style="font-size:13px;color:#2C3531;margin:4px 0;">• 예상 인원: ${guests || '미정'}</p>
       </div>
       <p style="font-size:13px;color:#8A9BA8;">
-        빠른 문의는 전화 <strong>010-0000-0000</strong>으로 연락주세요.<br>
-        영업시간: 평일 09:00 – 18:00
+        빠른 문의는 전화 <strong>031-708-0181</strong>으로 연락주세요.<br>
+        영업시간: 평일 10:00 – 19:00
       </p>
     </div>
     <div style="padding:20px 40px;background:#2C3531;text-align:center;font-size:11px;color:rgba(255,255,255,0.4);">

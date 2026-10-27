@@ -32,14 +32,14 @@ export default function ReservationPage() {
               <span className={styles.infoIcon}>📞</span>
               <div>
                 <p className={styles.infoLabel}>전화 문의</p>
-                <a href="tel:010-0000-0000" className={styles.infoValue}>010-0000-0000</a>
+                <a href="tel:031-708-0181" className={styles.infoValue}>031-708-0181</a>
               </div>
             </div>
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>⏰</span>
               <div>
                 <p className={styles.infoLabel}>상담 시간</p>
-                <p className={styles.infoValue}>평일 09:00 – 18:00</p>
+                <p className={styles.infoValue}>평일 10:00 – 19:00</p>
                 <p className={styles.infoValueSub}>주말·공휴일 상담 가능</p>
               </div>
             </div>

@@ -139,7 +139,7 @@ export default function BanquetPage() {
           </p>
           <div className={styles.ctaBtns}>
             <Link href="/reservation" className="btn-primary">온라인 상담 신청 →</Link>
-            <a href="tel:010-0000-0000" className="btn-outline">전화 문의</a>
+            <a href="tel:031-708-0181" className="btn-outline">전화 문의</a>
           </div>
         </div>
       </section>

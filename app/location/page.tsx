@@ -108,8 +108,8 @@ export default function LocationPage() {
 
             <div className={styles.contactInfo}>
               <p className={styles.contactLabel}>문의 &amp; 예약</p>
-              <a href="tel:010-0000-0000" className={styles.contactPhone}>010-0000-0000</a>
-              <p className={styles.contactHours}>평일 09:00 – 18:00 · 주말·공휴일 상담 가능</p>
+              <a href="tel:031-708-0181" className={styles.contactPhone}>031-708-0181</a>
+              <p className={styles.contactHours}>평일 10:00 – 19:00 · 주말·공휴일 상담 가능</p>
               <Link href="/reservation" className="btn-primary" style={{ marginTop: '1.25rem', display: 'inline-flex' }}>
                 온라인 상담 신청 →
               </Link>

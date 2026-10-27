@@ -21,6 +21,12 @@
   margin-bottom: 0.2rem;
   letter-spacing: 0.05em;
 }
+.brandLogo {
+  display: block;
+  width: 220px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
 .brandKr {
   font-size: 0.7rem;
   letter-spacing: 0.3em;

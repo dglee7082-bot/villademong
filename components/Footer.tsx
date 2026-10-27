@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Footer.module.css'
 import { MAIN_PAGE_ONLY } from '@/lib/site-config'
 
@@ -7,9 +8,15 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <p className={styles.brandName}>Villa de Mong</p>
+          <Image
+            src="/logo-light.png"
+            alt="VILLA de MONG"
+            width={220}
+            height={35}
+            className={styles.brandLogo}
+          />
           <p className={styles.brandKr}>빌라드몽</p>
-          <p className={styles.tagline}>당신의 가장 특별한 날을 함께합니다</p>
+          <p className={styles.tagline}>The place you&apos;ve dreamded of, VILLA de MONG</p>
         </div>
 
         <div className={styles.cols}>
@@ -25,9 +32,9 @@ export default function Footer() {
 
           <div className={styles.col}>
             <p className={styles.colTitle}>CONTACT</p>
-            <p>Tel. 010-0000-0000</p>
-            <p>Email. info@villademong.com</p>
-            <p>영업시간 09:00 – 18:00</p>
+            <p>Tel. 031-708-0181</p>
+            <p>Email. wedding@villademong.com</p>
+            <p>영업시간 10:00 – 19:00</p>
             <p>주말·공휴일 상담 가능</p>
           </div>
 
