@@ -25,25 +25,24 @@ export default function OpenHouseModal() {
     <div className={styles.backdrop} role="dialog" aria-modal="true" aria-label="오픈하우스 안내">
       <div className={styles.modal}>
         <button type="button" className={styles.close} onClick={close} aria-label="닫기">×</button>
-        <a href={OPEN_HOUSE_FORM_URL} target="_blank" rel="noopener noreferrer" onClick={close}>
+        <div className={styles.poster}>
           <Image
             src="/images/open-house.png"
-            alt="빌라드몽 오픈하우스 안내 및 신청하기"
+            alt="빌라드몽 오픈하우스 안내"
             width={886}
             height={1772}
             priority
             className={styles.image}
           />
-        </a>
-        <a
-          href={OPEN_HOUSE_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.action}
-          onClick={close}
-        >
-          오픈하우스 신청하기 →
-        </a>
+          <a
+            href={OPEN_HOUSE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.posterCta}
+            aria-label="오픈하우스 신청하기"
+            onClick={close}
+          />
+        </div>
       </div>
     </div>
   )

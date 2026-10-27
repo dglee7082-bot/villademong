@@ -20,10 +20,23 @@
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
 }
 
+.poster {
+  position: relative;
+}
+
 .image {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.posterCta {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 11%;
+  height: 7%;
+  border-radius: 999px;
 }
 
 .close {
@@ -42,19 +55,6 @@
   cursor: pointer;
 }
 
-.action {
-  width: calc(100% - 2rem);
-  margin: 0.75rem 1rem 1rem;
-  padding: 0.9rem 1rem;
-  border-radius: 999px;
-  color: #fff;
-  background: #315d78;
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
 @media (max-width: 480px) {
   .modal { max-width: 94vw; }
-  .action { margin-bottom: 0.75rem; }
 }
