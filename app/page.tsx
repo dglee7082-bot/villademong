@@ -142,7 +142,7 @@ export default function HomePage() {
 
       {/* ── KakaoTalk Float ──────────────────── */}
       {SHOW_KAKAO_BUTTON && <a
-        href="https://pf.kakao.com/_yourChannelId"
+        href="https://pf.kakao.com/_xoEwmn"
         target="_blank"
         rel="noopener noreferrer"
         className="kakao-float"
