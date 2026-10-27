@@ -187,6 +187,24 @@ h1, h2, h3, h4 {
 .kakao-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
 .kakao-float svg { width: 28px; height: 28px; }
 
+/* ── Beta notice ───────────────────────────── */
+.beta-badge {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 998;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid rgba(44, 53, 49, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--charcoal);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  text-align: center;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+}
+
 /* ── Form ───────────────────────────────────── */
 .form-group {
   display: flex;
@@ -250,4 +268,11 @@ h1, h2, h3, h4 {
     right: 1.25rem;
   }
   .kakao-float svg { width: 24px; height: 24px; }
+
+  .beta-badge {
+    left: 1rem;
+    bottom: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.62rem;
+  }
 }

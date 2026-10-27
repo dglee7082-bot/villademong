@@ -142,6 +142,10 @@ export default function HomePage() {
 
       <Footer />
 
+      <div className="beta-badge" role="status">
+        리뉴얼 홈페이지<br />베타 테스트 중입니다.
+      </div>
+
       {/* ── KakaoTalk Float ──────────────────── */}
       {SHOW_KAKAO_BUTTON && <a
         href="https://pf.kakao.com/_xoEwmn"
