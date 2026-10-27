@@ -4,7 +4,7 @@ import HeroSlider from '@/components/HeroSlider'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
-import { SHOW_HOME_ACTIONS } from '@/lib/site-config'
+import { SHOW_HOME_ACTIONS, SHOW_KAKAO_BUTTON } from '@/lib/site-config'
 
 export default function HomePage() {
   return (
@@ -141,7 +141,7 @@ export default function HomePage() {
       <Footer />
 
       {/* ── KakaoTalk Float ──────────────────── */}
-      {SHOW_HOME_ACTIONS && <a
+      {SHOW_KAKAO_BUTTON && <a
         href="https://pf.kakao.com/_yourChannelId"
         target="_blank"
         rel="noopener noreferrer"
