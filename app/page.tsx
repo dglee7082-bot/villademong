@@ -4,6 +4,7 @@ import HeroSlider from '@/components/HeroSlider'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
+import { SHOW_HOME_ACTIONS } from '@/lib/site-config'
 
 export default function HomePage() {
   return (
@@ -27,9 +28,9 @@ export default function HomePage() {
               하우스웨딩의 아늑함과 야외웨딩의 아름다움을 동시에 경험하실 수 있으며,
               섬세한 서비스와 아름다운 공간으로 평생 기억에 남을 하루를 선사합니다.
             </p>
-            <div style={{ marginTop: '2rem' }}>
+            {SHOW_HOME_ACTIONS && <div style={{ marginTop: '2rem' }}>
               <Link href="/about" className="btn-outline">브랜드 스토리 →</Link>
-            </div>
+            </div>}
           </div>
           <div className={styles.introImage}>
             <Image
@@ -114,9 +115,9 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+        {SHOW_HOME_ACTIONS && <div style={{ textAlign: 'center', marginTop: '3rem' }}>
           <Link href="/gallery" className="btn-primary">갤러리 전체 보기</Link>
-        </div>
+        </div>}
       </section>
 
       {/* ── CTA Banner ───────────────────────── */}
@@ -129,19 +130,19 @@ export default function HomePage() {
           <p className={styles.ctaSub}>
             빌라드몽 전담 플래너가 처음부터 끝까지 함께합니다
           </p>
-          <div className={styles.ctaActions}>
+          {SHOW_HOME_ACTIONS && <div className={styles.ctaActions}>
             <Link href="/reservation" className="btn-white">상담 신청하기</Link>
             <a href="tel:010-0000-0000" className="btn-outline" style={{ borderColor: 'rgba(255,255,255,0.5)', color: '#fff' }}>
               전화 문의 →
             </a>
-          </div>
+          </div>}
         </div>
       </section>
 
       <Footer />
 
       {/* ── KakaoTalk Float ──────────────────── */}
-      <a
+      {SHOW_HOME_ACTIONS && <a
         href="https://pf.kakao.com/_yourChannelId"
         target="_blank"
         rel="noopener noreferrer"
@@ -152,7 +153,7 @@ export default function HomePage() {
         <svg viewBox="0 0 24 24" fill="#3C1E1E">
           <path d="M12 3C6.48 3 2 6.69 2 11.25c0 2.88 1.74 5.42 4.38 6.96L5.5 21l3.67-1.93A11.3 11.3 0 0012 19.5c5.52 0 10-3.69 10-8.25S17.52 3 12 3z"/>
         </svg>
-      </a>
+      </a>}
     </>
   )
 }

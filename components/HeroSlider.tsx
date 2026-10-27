@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './HeroSlider.module.css'
+import { SHOW_HOME_ACTIONS } from '@/lib/site-config'
 
 const slides = [
   {
@@ -66,12 +67,12 @@ export default function HeroSlider() {
         <span className={styles.label}>{slide.label}</span>
         <h1 className={styles.title}>{slide.title}</h1>
         <p className={styles.sub}>{slide.sub}</p>
-        <div className={styles.actions}>
+        {SHOW_HOME_ACTIONS && <div className={styles.actions}>
           <Link href={slide.cta.href} className="btn-white">{slide.cta.text}</Link>
           <Link href="/reservation" className="btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.7)' }}>
             상담 신청 →
           </Link>
-        </div>
+        </div>}
       </div>
 
       {/* Indicators */}
