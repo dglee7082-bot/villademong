@@ -16,26 +16,27 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  width: min(520px, calc(100vw - 2rem));
+  width: auto;
+  max-width: calc(100vw - 2rem);
   flex: 0 0 auto;
   max-height: calc(100vh - 2rem);
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #fff;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
 }
 
 .poster {
   position: relative;
-  width: 100%;
+  width: auto;
   max-width: 100%;
   flex: 0 0 auto;
 }
 
 .image {
   display: block;
-  width: 100%;
+  width: auto;
   max-width: 100%;
+  max-height: calc(100vh - 2rem);
   height: auto;
 }
 
@@ -65,5 +66,5 @@
 }
 
 @media (max-width: 480px) {
-  .modal { max-width: 94vw; }
+  .modal { max-width: calc(100vw - 2rem); }
 }
