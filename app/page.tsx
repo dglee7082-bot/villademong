@@ -5,11 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
 import { SHOW_HOME_ACTIONS, SHOW_KAKAO_BUTTON } from '@/lib/site-config'
+import OpenHouseModal from '@/components/OpenHouseModal'
 
 export default function HomePage() {
   return (
     <>
       <Header />
+      <OpenHouseModal />
 
       {/* ── Hero ─────────────────────────────── */}
       <HeroSlider />

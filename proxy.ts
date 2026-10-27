@@ -7,7 +7,7 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const isAsset = /\.(?:ico|png|jpg|jpeg|webp|gif|svg|woff2?)$/i.test(pathname)
 
-  if (pathname === '/' || pathname.startsWith('/_next/') || isAsset) {
+  if (pathname === '/' || pathname === '/open-house' || pathname.startsWith('/_next/') || isAsset) {
     return NextResponse.next()
   }
 
