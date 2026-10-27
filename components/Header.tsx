@@ -4,8 +4,9 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import styles from './Header.module.css'
+import { MAIN_PAGE_ONLY } from '@/lib/site-config'
 
-const navItems = [
+const allNavItems = [
   { href: '/about',       label: 'ABOUT' },
   { href: '/wedding',     label: 'WEDDING' },
   { href: '/banquet',     label: 'BANQUET' },
@@ -13,6 +14,8 @@ const navItems = [
   { href: '/location',    label: 'LOCATION' },
   { href: '/reservation', label: 'RESERVATION', highlight: true },
 ]
+
+const navItems = MAIN_PAGE_ONLY ? [] : allNavItems
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -77,7 +80,7 @@ export default function Header() {
           </nav>
 
           {/* Hamburger */}
-          <button
+          {!MAIN_PAGE_ONLY && <button
             id="menu-toggle"
             className={`${styles.hamburger} ${open ? styles.open : ''}`}
             onClick={() => setOpen(v => !v)}
@@ -85,12 +88,12 @@ export default function Header() {
             aria-expanded={open}
           >
             <span /><span /><span />
-          </button>
+          </button>}
         </div>
       </header>
 
       {/* Mobile Drawer */}
-      <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`} aria-hidden={!open}>
+      {!MAIN_PAGE_ONLY && <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`} aria-hidden={!open}>
         <nav className={styles.drawerNav}>
           <p className={styles.drawerBrand}>Villa de Mong</p>
           {navItems.map(item => (
@@ -103,8 +106,8 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-      </div>
-      {open && (
+      </div>}
+      {!MAIN_PAGE_ONLY && open && (
         <div className={styles.overlay} onClick={() => setOpen(false)} aria-hidden />
       )}
     </>

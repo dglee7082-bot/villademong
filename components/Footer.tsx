@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from './Footer.module.css'
+import { MAIN_PAGE_ONLY } from '@/lib/site-config'
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.cols}>
-          <div className={styles.col}>
+          {!MAIN_PAGE_ONLY && <div className={styles.col}>
             <p className={styles.colTitle}>MENU</p>
             <Link href="/about">About</Link>
             <Link href="/wedding">Wedding</Link>
@@ -20,7 +21,7 @@ export default function Footer() {
             <Link href="/gallery">Gallery</Link>
             <Link href="/location">Location</Link>
             <Link href="/reservation">Reservation</Link>
-          </div>
+          </div>}
 
           <div className={styles.col}>
             <p className={styles.colTitle}>CONTACT</p>
@@ -34,14 +35,14 @@ export default function Footer() {
             <p className={styles.colTitle}>ADDRESS</p>
             <p>경기도 성남시 분당구 석운로 181</p>
             <p>빌라드몽 웨딩홀</p>
-            <Link href="/location" className={styles.mapLink}>오시는 길 →</Link>
+            {!MAIN_PAGE_ONLY && <Link href="/location" className={styles.mapLink}>오시는 길 →</Link>}
           </div>
         </div>
       </div>
 
       <div className={styles.bottom}>
         <p>© 2025 Villa de Mong (주)빌라드몽. All Rights Reserved.</p>
-        <Link href="/admin">관리자</Link>
+        {!MAIN_PAGE_ONLY && <Link href="/admin">관리자</Link>}
       </div>
     </footer>
   )

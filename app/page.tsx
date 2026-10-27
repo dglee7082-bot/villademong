@@ -95,7 +95,7 @@ export default function HomePage() {
       <section className={styles.galleryPreview}>
         <div className={styles.galleryHeader}>
           <span className="section-label">GALLERY</span>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>웨딩 갤러리</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>갤러리</h2>
           <div className="divider divider-center" />
         </div>
         <div className={styles.galleryGrid}>
